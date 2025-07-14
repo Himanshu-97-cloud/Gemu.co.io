@@ -6,16 +6,16 @@ let playerPattern = []
 function gamePatternSequence(){
     let randomNum = Math.floor(Math.random() * color.length)
     let randomColor = color[randomNum]
-    console.log(randomColor)
+    // console.log(randomColor)
 
     gamePattern.push(randomColor)
-    console.log(gamePattern)
+    // console.log(gamePattern)
 
     let i=0
     const interval = setInterval(()=> {
         const nextColor = gamePattern[i]
         const colorElement = document.querySelector(`[data-color="${nextColor}"]`)
-        console.log(colorElement)
+        // console.log(colorElement)
         playSound(nextColor)
         animateBox(colorElement)
         i++
@@ -32,10 +32,10 @@ function boxClicked(element){
     // console.log(element)
 
     let ele = element.getAttribute('data-color')
-    console.log(ele)
+    // console.log(ele)
 
     playerPattern.push(ele)
-    console.log(playerPattern)
+    // console.log(playerPattern)
     playSound(ele)
 
     let selectColor = document.querySelector(`[data-color="${ele}"]`)
@@ -63,7 +63,7 @@ function checkWinn(currStep){
         }
     } else {
         gameOverWindow.style.display = 'block'
-        console.log("Game over !!!")
+        // console.log("Game over !!!")
         restartGame()
     }
 }

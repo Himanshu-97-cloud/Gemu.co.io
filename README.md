@@ -37,6 +37,7 @@ It’s not just a playground for games — it’s a **showcase of growth** as a 
 | Game Name         | Description                                |
 | -------------     | ------------------------------------------ |
 | TicTac Showdown   | A unique twist on classic Tic Tac Toe      |
+| Memory Beats      | Memory Game            |
 | (Coming Soon)     | More puzzle, arcade, and logic-based games |
 
 ---
@@ -58,5 +59,5 @@ This is a personal project, but if you're interested in contributing ideas, UI d
 
 ## 👨‍💻 About Me
 
-I’m **Himanshu Pal**, a 2st-year B.Tech CSE student passionate about full-stack development, problem-solving, and creative coding.
+I’m **Himanshu Pal**, a 2nd-year B.Tech CSE student passionate about full-stack development, problem-solving, and creative coding.
 Gemu.co.io is my open canvas where I share what I build, one mini-game at a time.

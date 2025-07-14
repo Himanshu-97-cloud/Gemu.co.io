@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Showdown</title>
+    <link rel="stylesheet" href="tictac.css">
+</head>
+<body>
+    
+    <div class="title">
+        <h1>Tic Tac Showdown</h1>
+    </div>
+
+    <div class="game-container">
+        <div class="left-section">
+            <div class="box" onclick="boxClicked(this)" id="0"></div>
+            <div class="box" onclick="boxClicked(this)" id="1"></div>
+            <div class="box" onclick="boxClicked(this)" id="2"></div>
+            <div class="box" onclick="boxClicked(this)" id="3"></div>
+            <div class="box" onclick="boxClicked(this)" id="4"></div>
+            <div class="box" onclick="boxClicked(this)" id="5"></div>
+            <div class="box" onclick="boxClicked(this)" id="6"></div>
+            <div class="box" onclick="boxClicked(this)" id="7"></div>
+            <div class="box" onclick="boxClicked(this)" id="8"></div>
+        </div>
+
+        <div class="right-section">
+            <div class="result">
+                <h2>Result</h2>
+                <p class="winner">Winner is : </p>
+            </div>
+            <button class="btn" onclick="resetGame()">Reset</button>
+            <p class="note">Take turns placing "X" and "O" on the grid. Each player 
+                can have only 3 marks at a time — after the 4th move, 
+                the oldest one fades away. Align 3 marks in a row, 
+                column, or diagonal to win!</p>
+        </div>
+    </div>
+
+    <script src="tictac.js"></script>
+    
+</body>
+</html>

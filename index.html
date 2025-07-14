@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="main-container">
+        
+        <a href="#about-page">
+            <div class="about" onclick="toggle()">
+                <img src="./images/info.png" alt="about" class="about-img">
+                <p>About</p>
+            </div>
+        </a>
+
+        <div class="overlay">
+            <div class="about-container" id="about-container">
+                <p class="about-section">
+                    Gemu.co.io is a personal project by Himanshu Pal, 
+                    created as a fun and creative space to showcase mini-games built using HTML, CSS, and JavaScript. Each game on this site is handcrafted with 
+                    passion for coding, design, and interactive experiences. The goal is to blend learning with entertainment — whether you're here to play, 
+                    get inspired, or explore what’s possible with frontend development. New games are added regularly, so 
+                    stay connected and enjoy the journey!
+                </p>
+            </div>
+        </div>
+
+        <div class="title">
+            <h1>Gemu.co.io</h1>
+            <div class="desc">
+                Welcome to Gemu.co.io — a creative space by Himanshu Pal where fun meets code
+            </div>
+        </div>
+
+        <div class="games-container">
+            <div class="games-section">
+                <div class="game-card">
+                    <a href="./G1 - Tic Tac Toe/tictac.html">
+                        <img src="./images/Tic Tac Showdown.png" alt="Tic Tac Showdown" class="game-img">
+                    </a>
+                    
+                    <a href="./G2 - Memory Beats/mb.html">
+                        <img src="./images/Memory Beats.png" alt="Tic Tac Showdown" class="game-img">
+                    </a>
+                
+                    <a href="#game3">
+                        <img src="./images/coming soon.png" alt="Tic Tac Showdown" class="game-img">
+                    </a>
+                    
+                    <a href="#game4">
+                        <img src="./images/coming soon.png" alt="Tic Tac Showdown" class="game-img">
+                    </a>
+                    
+                    <a href="#game5">
+                        <img src="./images/coming soon.png" alt="Tic Tac Showdown" class="game-img">
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const about = document.querySelector('.about')
+        const aboutContainer = document.querySelector('.about-container')
+        const overlay = document.querySelector('.overlay')
+
+        about.addEventListener('click' , function(){
+            overlay.style.display = 'block'
+            aboutContainer.style.display = 'block'
+        })
+        overlay.addEventListener('click' , function(ele){
+            if(!about.contains(ele.target)){
+                overlay.style.display = 'none'
+                aboutContainer.style.display = 'none'
+            }
+        })
+
+
+
+
+    </script>
+
+</body>
+</html>

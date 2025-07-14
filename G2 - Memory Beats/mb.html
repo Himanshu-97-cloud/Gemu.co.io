@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Beats</title>
+    <link rel="stylesheet" href="mb.css">
+</head>
+<body>
+
+    <div class="title">
+        <h1>Memory Beats</h1>
+    </div>
+
+    <div class="game-container">
+
+        <div class="left-section">
+            <div class="box box1" onclick="boxClicked(this)" data-color="red"></div>
+            <div class="box box2" onclick="boxClicked(this)" data-color="yellow"></div>
+            <div class="box box3" onclick="boxClicked(this)" data-color="green"></div>
+            <div class="box box4" onclick="boxClicked(this)" data-color="blue"></div>
+        </div>
+
+        <div class="right-section">
+            <div class="result">
+                <h2 class="scoreCard">Score : 0</h2>
+                <div class="otherElement">
+                    <img src="./images/unmute.png" alt="unmute" class="img" onclick="sound()">
+                    <button onclick="startGame()">New Game</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="gameOver-window" onclick="showDisplay()">
+        <div id="displayNone">
+            <div class="windowText">
+                <p>Game Over !!!</p>
+                <p class="gameOverText">Score : </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="mb.js"></script>
+
+</body>
+</html>

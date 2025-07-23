@@ -8,26 +8,12 @@ let score = 0
 let timer
 let countdown
 
-function showMole(){
-    let  random = Math.floor(Math.random() * 10)
-    let randomHole = document.querySelector(`[id="${random}"]`)
-    // console.log(randomHole)
-    
-    randomHole.classList.add('moleAnimation')
-    randomHole.addEventListener('click' , handleClick)
-
-    setTimeout(()=>{
-        randomHole.classList.remove('moleAnimation')
-        randomHole.removeEventListener('click' , handleClick)
-    }, 3000)
-
-}
 
 function handleClick(){
     score++
     scoreBoard.textContent = `Score : ${score}`
     this.classList.remove('moleAnimation')
-
+    
     this.classList.add('glitter');
     setTimeout(() => {
         this.classList.remove('glitter');
@@ -39,10 +25,10 @@ function startGame(){
     timer = 30
     scoreBoard.textContent = `Score : ${score}`
     gameTimer.textContent = `Timer : ${timer}`
-
+    
     startBtn.disabled = true
     endBtn.disabled = false
-
+    
     countdown = setInterval(()=>{
         timer--
         gameTimer.textContent = `Timer : ${timer}`
@@ -62,7 +48,8 @@ function startGame(){
         showMole()
         if(timer <= 0){
             clearInterval(moleInterval)
-        }
+        } 
+
     } , 1000)
     
     endBtn.addEventListener('click' , ()=>{
@@ -76,5 +63,23 @@ function startGame(){
             `)
             score = 0
             timer = 30
-    })
+        })
+    }
+    
+function showMole(){
+    let  random = Math.floor(Math.random() * 10)
+    let randomHole = document.querySelector(`[id="${random}"]`)
+    // console.log(randomHole)
+    
+    randomHole.classList.add('moleAnimation')
+    randomHole.addEventListener('click' , handleClick)
+    
+    let intervalSpeedMole = Math.max(1000, 3000 - score * 50)
+    // console.log(intervalSpeedMole)
+
+    setTimeout(()=>{
+        randomHole.classList.remove('moleAnimation')
+        randomHole.removeEventListener('click' , handleClick)
+    }, intervalSpeedMole)
+    
 }
